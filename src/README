@@ -1,0 +1,28 @@
+Tema implementeaza cele trei design patter-uri din cerinte prin clasele:
+
+-> clasa FormFactory care implementeaza Factory Pattern-ul pentru creeare
+formelor
+
+-> clasa FromFactory implementeaza si Singleton Patter, deoarece avem nevoie
+de o singura instantiere, programul nostru generand o singura imagine
+
+-> clasa DrawVisitor implementeaza Visitor Pattern. Astfel, fiecare forma este
+vizitata de vizitorul nostru de desenare prin metoda accept din fiecare clasa
+care mosteneste clasa abstracta Form. Clasa DrawVisitor are metode de tip
+'visit' pentru fiecare forma si are ca scopul desenarea acesteia.
+
+In pachetul 'algorithms' sunt prezente clase de tip Utility care contin
+algoritmii de desenare:
+    - Bresenham's Line - deseneaza o linie dintre doua puncte
+    - Bresenham's Circle - deseneaza conturul unui cerc
+    - Flood Fill - coloreaza pixelii din interiorul formei folosind culoare data
+
+Pachetul 'main' contine:
+    - Interfetele Visitor si Visitable si clasa DrawVisitor
+      pentru implementarea Visitor Pattern-ului
+    - Clasa abstracta Form si clasele derivate din aceasta
+      (Line, Square, Rectangle, Triangle, Diamond, Polygon),
+    - Clasa Canvas
+    - Enum-ul FormTypes, care retine denumirea formelor
+    - Clasa Point ce retine coordonate de tip x si y
+    - Clasa ImageUtility cu metode ajutatoare pentru colorarea imaginii.

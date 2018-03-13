@@ -1,0 +1,5 @@
+build:
+	javac -g Main.java
+clean:
+	rm algorithms/*.class
+	rm main/*.class
